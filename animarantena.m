@@ -263,19 +263,6 @@ else
     set(linha(1),'ydata',[0 0 u(3) u(3)]);
     
     drawnow;
-    
-    % Alterar para True, se desejar gerar um gif.
-    if false
-      M = getframe(gcf); 
-      im = frame2im(M); 
-      [imind,cm] = rgb2ind(im,256); 
-      % Write to the GIF File 
-      if t == 0 
-          imwrite(imind,cm,'animarantena.gif','gif', 'Loopcount',inf); 
-      else 
-          imwrite(imind,cm,'animarantena.gif','gif','WriteMode','append'); 
-      end
-    end
 end
 
 
