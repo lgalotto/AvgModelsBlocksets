@@ -1,0 +1,24 @@
+function mi = MaquinaAssincrona(tensao, frequencia, polos, potencia, nfases, tipolig, rs,xs,rr,xr,xm,dav)
+    if nargin < 3, polos = 2; end
+    if nargin < 4, potencia = 0; end
+    if nargin < 5, nfases = 3; end
+    if nargin < 6, tipolig=1; end % 1 para Estrela e 0 para triangulo
+    if nargin < 7, rs=1; end
+    if nargin < 8, xs=1; end
+    if nargin < 9, rr=1; end
+    if nargin < 10, xr=1; end
+    if nargin < 11, xm=1; end
+    if nargin < 12, dav=0; end
+    
+        mi.tensao = tensao;
+        mi.frequencia = frequencia;
+        mi.polos = polos;
+        mi.potencia = potencia;
+        mi.nfases = nfases;
+        mi.tipolig = tipolig;
+        mi.rs = rs;
+        mi.xs = xs;
+        mi.rr = rr;
+        mi.xr = xr; % reatancia de dispersao do rotor
+        mi.xm = xm; % reatancia de magnetizacao no nucleo
+        mi.dav = dav; % coeficiente de atrito dinamico
